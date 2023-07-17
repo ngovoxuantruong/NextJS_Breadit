@@ -32,7 +32,7 @@ const Page = () => {
                     variant: "destructive",
                 });
             }
- 
+
             if (err.response?.status === 422) {
                 return toast({
                     title: "Invalid subreddit name",
