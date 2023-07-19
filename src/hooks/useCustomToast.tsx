@@ -9,7 +9,11 @@ export const useCustomToast = () => {
             description: "You need to be logged in to do that.",
             variant: "destructive",
             action: (
-                <Link href={"/sign-in"} onClick={() => dismiss()} className={buttonVariants({ variant: "outline" })}>
+                <Link
+                    href={"/sign-in"}
+                    onClick={() => dismiss()}
+                    className={buttonVariants({ variant: "outline" })}
+                >
                     Login
                 </Link>
             ),

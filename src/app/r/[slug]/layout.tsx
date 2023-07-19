@@ -3,7 +3,6 @@ import { db } from "@/lib/db";
 import { notFound } from "next/navigation";
 import { format } from "date-fns";
 import React from "react";
-import { Divide } from "lucide-react";
 import SubscribeLeaveToggle from "@/components/SubscribeLeaveToggle";
 
 const Layout = async ({
@@ -92,7 +91,11 @@ const Layout = async ({
                             ) : null}
 
                             {subreddit.creatorId !== session?.user.id ? (
-                                <SubscribeLeaveToggle subredditId={subreddit.id} />
+                                <SubscribeLeaveToggle
+                                    isSubscribed={isSubscribed}
+                                    subredditId={subreddit.id}
+                                    subredditName={subreddit.name}
+                                />
                             ) : null}
                         </dl>
                     </div>
