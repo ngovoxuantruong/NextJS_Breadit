@@ -67,19 +67,31 @@ const Page = () => {
 
                 <div>
                     <p className="text-lg font-medium">Name</p>
-                    <p className="text-xs pb-2">Community names including capitalization cannot be changed</p>
+                    <p className="text-xs pb-2">
+                        Community names including capitalization cannot be changed
+                    </p>
                 </div>
 
                 <div className="relative">
-                    <p className="absolute text-sm left-0 w-8 inset-y-0 grid place-items-center text-zinc-400">r/</p>
-                    <Input value={input} onChange={(e) => setInput(e.target.value)} className="pl-6" />
+                    <p className="absolute text-sm left-0 w-8 inset-y-0 grid place-items-center text-zinc-400">
+                        r/
+                    </p>
+                    <Input
+                        value={input}
+                        onChange={(e) => setInput(e.target.value)}
+                        className="pl-6"
+                    />
                 </div>
 
                 <div className="flex justify-end gap-4">
                     <Button variant="subtle" onClick={() => router.back()}>
                         Cancel
                     </Button>
-                    <Button isLoading={isLoading} disabled={input.length === 0} onClick={() => createCommunity()}>
+                    <Button
+                        isLoading={isLoading}
+                        disabled={input.length === 0}
+                        onClick={() => createCommunity()}
+                    >
                         Create Community
                     </Button>
                 </div>
